@@ -1,5 +1,7 @@
 from django.http import HttpResponse
-
+import json
 
 def hello(request):
-    return HttpResponse("Hello world !")
+    a = {'name': "Hello world !"}
+    response = json.dumps(a)
+    return HttpResponse(response)
