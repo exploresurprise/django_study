@@ -21,9 +21,10 @@ from . import views, testdb
 urlpatterns = [
     # path("admin/", admin.site.urls),
     path("first/", views.hello, name="hello"),
-    path("", views.hello, name="hello"),
+    # path("", views.hello, name="hello"),
     # path('runoob/', views.runoob),
     # path('testdb/', testdb.testdb),
+    path('AItest/',include('AItest.urls')),
     path('testmodel/',include('TestModel.urls'))
 ]
 # path()函数参数作用
